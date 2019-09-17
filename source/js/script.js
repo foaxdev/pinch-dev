@@ -1,63 +1,45 @@
 let slideIndex = 1;
-let elsSlides = document.getElementsByClassName("slide-show__slide");
 
-function plusSlides() {
-    changeSlides();
+let elButtonNext = document.querySelector(".slider-dots-list__button--next");
+let elButtonPrevious = document.querySelector(".slider-dots-list__button--previous");
+
+if (elButtonNext && elButtonPrevious)
+    showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
 }
 
-function showSlides(n, elButtonNext, elButtonPrevious) {
+function showSlides(n) {
     let elsSlides = document.getElementsByClassName("slide-show__slide");
 
-    console.log(n);
-
-    if (n + 1 >= elsSlides.length) {
-        elButtonNext.removeEventListener("click", function () {
-            plusSlides();
-        }, false);
+    if (n + 1 > elsSlides.length) {
+        elButtonNext.removeEventListener("click", setNextSlide, true);
         elButtonNext.classList.add("slider-dots-list__button--disabled");
     } else {
-        elButtonNext.addEventListener("click", function () {
-            plusSlides();
-        }, false);
+        elButtonNext.addEventListener("click", setNextSlide, true);
         elButtonNext.classList.remove("slider-dots-list__button--disabled");
     }
 
-    if (n - 1 <= 1) {
-        elButtonPrevious.removeEventListener("click", function () {
-            plusSlides();
-        }, false);
+    if (n - 1 < 1) {
+        elButtonPrevious.removeEventListener("click", setPreviousSlide, true);
         elButtonPrevious.classList.add("slider-dots-list__button--disabled");
     } else {
-        elButtonPrevious.addEventListener("click", function () {
-            plusSlides();
-        }, false);
+        elButtonPrevious.addEventListener("click", setPreviousSlide, true);
         elButtonPrevious.classList.remove("slider-dots-list__button--disabled");
     }
-}
 
-function changeSlides() {
     for (let i = 0; i < elsSlides.length; i++) {
         elsSlides[i].style.display = "none";
     }
 
     elsSlides[slideIndex - 1].style.display = "block";
-    slideIndex++;
 }
 
-if (elsSlides) {
-    let elButtonNext = document.querySelector(".slider-dots-list__button--next");
-    let elButtonPrevious = document.querySelector(".slider-dots-list__button--previous");
+function setNextSlide() {
+    plusSlides(1);
+}
 
-    if (elButtonNext && elButtonPrevious) {
-        elButtonNext.addEventListener("click", function () {
-            plusSlides();
-        }, false);
-
-        elButtonPrevious.addEventListener("click", function () {
-            plusSlides();
-        }, false);
-
-        showSlides(slideIndex, elButtonNext, elButtonPrevious);
-    }
-
+function setPreviousSlide() {
+    plusSlides(-1);
 }
