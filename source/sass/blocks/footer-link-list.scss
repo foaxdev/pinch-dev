@@ -1,0 +1,21 @@
+.footer-link-list {
+    @include list-reset();
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-link-list__link {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $white;
+
+    &:hover,
+    &:focus {
+        opacity: 0.6;
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
+}

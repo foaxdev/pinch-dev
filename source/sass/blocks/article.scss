@@ -1,0 +1,44 @@
+.article {
+    margin-top: -20px;
+    min-height: 1083px;
+    padding-bottom: 90px;
+
+    background-color: $green;
+    background-image: url("../img/geer.svg");
+    background-repeat: no-repeat;
+    background-size: 398px 404px;
+    background-position: 460px 510px;
+}
+
+.article__wrap {
+    display: flex;
+    justify-content: flex-end;
+    width: 1640px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.article__inner-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 674px;
+    margin-top: 510px;
+}
+
+.article__header {
+    margin: 0;
+
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 67px;
+    color: $white;
+}
+
+.article__text {
+    margin: 10px 0 50px 0;
+
+    font-size: 20px;
+    line-height: 27px;
+    color: $white;
+}

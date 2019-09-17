@@ -1,0 +1,45 @@
+.footer {
+    position: relative;
+
+    padding-top: 20px;
+
+    background-color: $gray;
+
+    &::after {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        right: 0;
+
+        width: 346px;
+        height: 387px;
+
+        background-image: url("../img/geers-bottom.svg");
+        background-size: 346px 387px;
+        background-repeat: no-repeat;
+    }
+}
+
+.footer__wrap {
+    display: flex;
+    width: 1640px;
+    margin: 0 auto;
+    padding: 0 140px 90px 140px;
+}
+
+.footer__content {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+        margin-right: 350px;
+    }
+}
+
+.footer__header {
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 28px;
+    color: $green;
+    text-transform: uppercase;
+}

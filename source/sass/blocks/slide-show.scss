@@ -1,0 +1,62 @@
+.slide-show {
+    position: relative;
+
+    min-height: 834px;
+    margin-top: 45px;
+
+    background-color: $gray;
+}
+
+.slide-show__slide {
+    display: none;
+    min-height: 834px;
+    width: 100%;
+
+    &--fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    &--slide-1 {
+        background-image: url("../img/slide@1x.png");
+        background-repeat: no-repeat;
+
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+            background-image: url("../img/slide@2x.png");
+        }
+    }
+
+    &--slide-2 {
+        background-image: url("../img/slide@1x.png");
+        background-repeat: no-repeat;
+
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+            background-image: url("../img/slide@2x.png");
+        }
+    }
+
+    &--slide-3 {
+        background-image: url("../img/slide@1x.png");
+        background-repeat: no-repeat;
+
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+            background-image: url("../img/slide@2x.png");
+        }
+    }
+}
+
+.slide-show__wrap {
+    width: 1364px;
+    margin: 0 auto;
+}
+
+.slide-show__header {
+    margin: 0;
+    padding: 45px 0 30px 0;
+    width: 944px;
+
+    font-size: 62px;
+    font-weight: 400;
+    line-height: 74px;
+    color: $white;
+}

@@ -1,0 +1,51 @@
+.previews-list {
+    @include list-reset();
+    position: absolute;
+    top: 440px;
+    left: 50%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 65px 135px 40px 135px;
+    margin-left: -677px;
+    width: 1354px;
+    height: 834px;
+
+    background-color: $white;
+}
+
+.previews-list__item {
+    width: 536px;
+}
+
+.previews-list__image {
+    display: block;
+    width: 536px;
+    height: 271px;
+
+    background-color: $light-gray;
+}
+
+.previews-list__title {
+    display: flex;
+    justify-content: center;
+    padding: 3px 10px 20px 10px;
+    width: 100%;
+
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    color: $gray;
+
+    border-top: 2px solid $green;
+
+    &:hover,
+    &:focus {
+        color: rgba(112, 112, 112, 0.6);
+    }
+
+    &:active {
+        color: rgba(112, 112, 112, 0.3);
+    }
+}

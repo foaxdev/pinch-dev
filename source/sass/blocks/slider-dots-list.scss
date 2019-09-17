@@ -1,0 +1,57 @@
+.slider-dots-list {
+    @include list-reset();
+    position: absolute;
+    bottom: 460px;
+    left: 260px;
+
+    display: flex;
+}
+
+.slider-dots-list__button {
+    @include hide-text();
+    display: block;
+    width: 52px;
+    height: 52px;
+
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 15px 29px;
+    border: 3px solid $white;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    &--previous {
+        margin-right: 30px;
+
+        background-image: url("../img/arrow-left.svg");
+    }
+
+    &--next {
+        background-image: url("../img/arrow-right.svg");
+    }
+
+    &:hover,
+    &:focus {
+        opacity: 0.6;
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
+
+    &--disabled {
+        opacity: 0.5;
+        cursor: initial;
+
+        &:hover,
+        &:focus {
+            opacity: 0.5;
+        }
+
+        &:active {
+            opacity: 0.5;
+        }
+    }
+}

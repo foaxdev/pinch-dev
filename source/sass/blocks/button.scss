@@ -1,0 +1,21 @@
+.button {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 13px 22px;
+
+    font-size: 18px;
+    line-height: 20px;
+    color: $white;
+
+    border: 2px solid rgba(162, 194, 77, 0.77);
+    border-radius: 50px;
+
+    &:hover,
+    &:focus {
+        opacity: 0.6;
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
+}

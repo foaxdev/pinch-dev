@@ -1,0 +1,31 @@
+.nav-list {
+    @include list-reset();
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px 140px 0 140px;
+
+    border-top: 1px solid $gray;
+}
+
+.nav-list__item {
+    display: flex;
+    justify-content: center;
+    width: 260px;
+    margin-bottom: 10px;
+}
+
+.nav-list__link {
+    font-size: 20px;
+    line-height: 24px;
+    color: $gray;
+
+    &:hover,
+    &:focus {
+        opacity: 0.6;
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
+}
