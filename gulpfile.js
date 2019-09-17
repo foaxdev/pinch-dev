@@ -73,7 +73,7 @@ gulp.task("images", function () {
 });
 
 gulp.task("webp", function () {
-  return gulp.src("source/img/*.{png}")
+  return gulp.src("source/img/**/*.{png}")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("source/img"));
 });
